@@ -36,19 +36,19 @@ class LinkedList:
             while curr.next is not None:
                 curr = curr.next
             curr.next = new
-        
-          
 
     def status(self):
         """
         It prints all the elements of list.
         """
+        elements = []
         curr = self.head
         while curr is not None:
-            print(curr.data, end = " ")
+            elements.append(curr.data)
             curr = curr.next
-        print()
+        print(elements)
 
+        
 def get_num(l: Optional[LinkedList]) -> int:
     num = 0
     curr = l.head
