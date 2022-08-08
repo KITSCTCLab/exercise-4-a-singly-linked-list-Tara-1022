@@ -29,11 +29,11 @@ class LinkedList:
         :param data: integer data that will be used to create a node
         """
         new = Node(data)
-        if self.head == None:
+        if self.head is None:
             self.head = new
         else:
             curr = self.head
-            while curr.next != None:
+            while not (curr.next is None):
                 curr = curr.next
             curr.next = new
           
@@ -43,14 +43,14 @@ class LinkedList:
         It prints all the elements of list.
         """
         curr = self.head
-        while curr != None and curr.next != None:
+        while not (curr is None) and not (curr.next is None):
             print(curr.data, end = " ")
 
 
 def get_num(l: LinkedList):
     num = 0
     curr = l.head
-    while curr != None and curr.next != None:
+    while not (curr is None) and not (curr.next is None):
         num = num * 10 + curr.data
         curr = curr.next
     return int(str(num)[::-1])
