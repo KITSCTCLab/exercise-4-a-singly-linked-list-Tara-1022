@@ -28,15 +28,11 @@ class LinkedList:
         Insert node at end of the list
         :param data: integer data that will be used to create a node
         """
-        new = Node(data)
-        print(new)
-        if self.head is None:
-            self.head = new
-        else:
-            curr = self.head
-            while not (curr.next is None):
-                curr = curr.next
-            curr.next = new
+        new = Node(data, None)
+        curr = self.head
+        while curr is not None:
+            curr = curr.next
+         curr.next = new
         
           
 
@@ -45,17 +41,18 @@ class LinkedList:
         It prints all the elements of list.
         """
         curr = self.head
-        while not (curr is None) and not (curr.next is None):
+        while curr is not None:
             print(curr.data, end = " ")
+            curr = curr.next
+        print()
 
-
-def get_num(l: LinkedList):
+def get_num(l: Optional[LinkedList]) -> int:
     num = 0
     curr = l.head
-    while not (curr is None) and not (curr.next is None):
-        num = num * 10 + curr.data
+    while curr is not None:
+        num = curr.data * 10 + num
         curr = curr.next
-    return int(str(num)[::-1])
+    return num
             
 class Solution:
     """
@@ -69,9 +66,10 @@ class Solution:
         """
         result = get_num(first_list) + get_num(second_list)
         sum_list = LinkedList()
-        for digit in map(int, str(result)[::-1]):
+        for digit in list(map(int, str(result))):
             sum_list.insert_at_end(digit)
         return sum_list
+        
         
         
 
