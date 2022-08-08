@@ -30,9 +30,12 @@ class LinkedList:
         """
         new = Node(data, None)
         curr = self.head
-        while curr is not None:
-            curr = curr.next
-        curr.next = new
+        if curr is None:
+            self.head = new
+        else:
+            while curr.next is not None:
+                curr = curr.next
+            curr.next = new
         
           
 
