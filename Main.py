@@ -29,6 +29,7 @@ class LinkedList:
         :param data: integer data that will be used to create a node
         """
         new = Node(data)
+        print(new)
         if self.head is None:
             self.head = new
         else:
@@ -36,6 +37,7 @@ class LinkedList:
             while not (curr.next is None):
                 curr = curr.next
             curr.next = new
+        
           
 
     def status(self):
