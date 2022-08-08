@@ -50,7 +50,7 @@ class LinkedList:
 def get_num(l: LinkedList):
     num = 0
     curr = l.head
-    while curr != None and curr.next !+ None:
+    while curr != None and curr.next != None:
         num = num * 10 + curr.data
         curr = curr.next
     return int(str(num)[::-1])
