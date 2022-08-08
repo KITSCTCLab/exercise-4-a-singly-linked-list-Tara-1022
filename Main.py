@@ -32,7 +32,7 @@ class LinkedList:
         curr = self.head
         while curr is not None:
             curr = curr.next
-         curr.next = new
+        curr.next = new
         
           
 
