@@ -43,19 +43,13 @@ class LinkedList:
         """
         elements = []
         curr = self.head
-        while curr is not None:
+        while curr:
             elements.append(curr.data)
             curr = curr.next
         print(elements)
 
         
-def get_num(l: Optional[LinkedList]) -> int:
-    num = 0
-    curr = l.head
-    while curr is not None:
-        num = num * 10 + curr.data
-        curr = curr.next
-    return num
+
             
 class Solution:
     """
@@ -67,12 +61,20 @@ class Solution:
         :param second_list: Linkedlist with non-negative integers
         :return: returns the sum as a linked list
         """
-        result = int(str(get_num(first_list) + get_num(second_list))[::-1])
+        result = get_num(first_list) + get_num(second_list)
         sum_list = LinkedList()
-        for digit in list(map(int, str(result))):
+        for digit in list(map(int, str(result)[::-1])):
             sum_list.insert_at_end(digit)
         return sum_list
-        
+    
+    
+    def get_num(l: Optional[LinkedList]) -> int:
+        num = 0
+        curr = l.head
+        while curr is not None:
+            num = num * 10 + curr.data
+            curr = curr.next
+        return num
         
         
 
