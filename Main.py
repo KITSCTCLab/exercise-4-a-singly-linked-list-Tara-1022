@@ -5,6 +5,7 @@ class Node:
     """
     Provide necessary documentation
     """
+
     def __init__(self, data=None, next=None):
         """
         Provide necessary documentation
@@ -17,6 +18,7 @@ class LinkedList:
     """
     Provide necessary documentation
     """
+
     def __init__(self):
         """
         Initialize the head
@@ -48,14 +50,14 @@ class LinkedList:
             curr = curr.next
         print(elements)
 
-        
 
-            
 class Solution:
     """
     Provide necessary documentation
     """
-    def addTwoNumbers(self, first_list: Optional[LinkedList], second_list: Optional[LinkedList]) -> Optional[LinkedList]:
+
+    def addTwoNumbers(self, first_list: Optional[LinkedList], second_list: Optional[LinkedList]) -> Optional[
+        LinkedList]:
         """
         :param first_list: Linkedlist with non-negative integers
         :param second_list: Linkedlist with non-negative integers
@@ -66,8 +68,7 @@ class Solution:
         for digit in list(map(int, str(result)[::-1])):
             sum_list.insert_at_end(digit)
         return sum_list
-    
-    
+
     def get_num(self, l: Optional[LinkedList]) -> int:
         num = 0
         curr = l.head
@@ -75,10 +76,9 @@ class Solution:
             num = num * 10 + curr.data
             curr = curr.next
         return num
-        
-        
 
-# Do not edit the following code      
+
+# Do not edit the following code
 # Create an instance for LinkedList
 first_list = LinkedList()
 # Create an another instance for LinkedListT
