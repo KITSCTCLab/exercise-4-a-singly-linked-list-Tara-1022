@@ -3,12 +3,15 @@ from typing import Optional
 
 class Node:
     """
-    Provide necessary documentation
+    This class describes Node objects to act as elements of the LinkedList
+    Attributes:
+        -> data - stored associated data
+        -> next - link to next node
     """
 
     def __init__(self, data=None, next=None):
         """
-        Provide necessary documentation
+        Initialises the Node with given attributes
         """
         self.data = data
         self.next = next
@@ -16,7 +19,12 @@ class Node:
 
 class LinkedList:
     """
-    Provide necessary documentation
+    This class implements LinkedList using Node objects
+    Methods:
+        -> insert_at_end - inserts node with data at the end of the list
+        -> status - displays all elements of the list
+    Attributes
+        -> self.head - contains first node of LinkedList, None if list empty
     """
 
     def __init__(self):
@@ -53,7 +61,8 @@ class LinkedList:
 
 class Solution:
     """
-    Provide necessary documentation
+    Class implementing functions to add numbers in a LinkedListT
+    
     """
 
     def addTwoNumbers(self, first_list: Optional[LinkedList], second_list: Optional[LinkedList]) -> Optional[
@@ -70,6 +79,10 @@ class Solution:
         return sum_list
 
     def get_num(self, l: Optional[LinkedList]) -> int:
+        """
+        :param l: LinkedList with non-negative integers
+        :return: returns digits of the list as a single integer
+        """
         curr = l.head
         if curr is None:
             return 0
