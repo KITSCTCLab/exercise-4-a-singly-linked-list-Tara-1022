@@ -61,14 +61,14 @@ class Solution:
         :param second_list: Linkedlist with non-negative integers
         :return: returns the sum as a linked list
         """
-        result = get_num(first_list) + get_num(second_list)
+        result = self.get_num(first_list) + self.get_num(second_list)
         sum_list = LinkedList()
         for digit in list(map(int, str(result)[::-1])):
             sum_list.insert_at_end(digit)
         return sum_list
     
     
-    def get_num(l: Optional[LinkedList]) -> int:
+    def get_num(self, l: Optional[LinkedList]) -> int:
         num = 0
         curr = l.head
         while curr is not None:
