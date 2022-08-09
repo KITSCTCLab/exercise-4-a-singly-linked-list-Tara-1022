@@ -70,12 +70,14 @@ class Solution:
         return sum_list
 
     def get_num(self, l: Optional[LinkedList]) -> int:
-        num = 0
         curr = l.head
+        if curr is None:
+            return 0
+        num = ""
         while curr is not None:
-            num = num * 10 + curr.data
+            num = str(curr.data) + num
             curr = curr.next
-        return num
+        return int(num)
 
 
 # Do not edit the following code
