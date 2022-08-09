@@ -67,7 +67,7 @@ class Solution:
         :param second_list: Linkedlist with non-negative integers
         :return: returns the sum as a linked list
         """
-        result = get_num(first_list) + get_num(second_list)
+        result = int(str(get_num(first_list) + get_num(second_list))[::-1])
         sum_list = LinkedList()
         for digit in list(map(int, str(result))):
             sum_list.insert_at_end(digit)
