@@ -22,7 +22,7 @@ class LinkedList:
     This class implements LinkedList using Node objects
     Methods:
         -> insert_at_end - inserts node with data at the end of the list
-        -> status - displays all elements of the list
+        -> status - displays all elements of the lisT
     Attributes
         -> self.head - contains first node of LinkedList, None if list empty
     """
