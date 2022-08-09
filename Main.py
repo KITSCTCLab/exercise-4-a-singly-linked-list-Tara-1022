@@ -55,7 +55,7 @@ def get_num(l: Optional[LinkedList]) -> int:
     while curr is not None:
         num = num * 10 + curr.data
         curr = curr.next
-    return int(str(num)[::-1])
+    return num
             
 class Solution:
     """
