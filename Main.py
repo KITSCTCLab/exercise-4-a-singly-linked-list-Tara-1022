@@ -65,7 +65,7 @@ class Solution:
         """
         result = self.get_num(first_list) + self.get_num(second_list)
         sum_list = LinkedList()
-        for digit in list(map(int, str(result))):
+        for digit in list(map(int, str(result)[::-1])):
             sum_list.insert_at_end(digit)
         return sum_list
 
